@@ -170,6 +170,7 @@ section h1 {
     border-radius: 5px;
     cursor: pointer;
     appearance: none;
+    -webkit-appearance: none;
 }
 .contact-form input[type="reset"] {
     border: none;
@@ -177,6 +178,7 @@ section h1 {
     border-radius: 5px;
     cursor: pointer;
     appearance: none;
+    -webkit-appearance: none;
 }
 .contact-form input[type="submit"]:hover {
     background-color: #000000;
