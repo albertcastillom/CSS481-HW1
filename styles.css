@@ -1,6 +1,6 @@
 body{
     min-height: 100dvh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     display: grid;
@@ -13,7 +13,7 @@ body{
     grid-template-rows: 1fr;
     grid-template-columns:  auto 1fr;
     align-items: center;
-    background-color: #21391f;
+    background-color: #000000;
     padding: 0.2rem 0.2rem 0.2rem 1rem;
 }
 
@@ -36,11 +36,14 @@ body{
     color: #ffffff;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    letter-spacing: 0.5px;
 }
 
 .nav-links:hover{
-    background-color: #132e11;
+    text-decoration: underline;
     border-radius: 5px;
+    background-color: #212121;
 }
 
 .footer-container{
@@ -48,7 +51,7 @@ body{
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     align-items: center;
-    background-color: #21391f;
+    background-color: #000000;
 }
 
 .footer-item{
@@ -59,18 +62,29 @@ body{
 
 section {
     padding: 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+section h1 {
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 0.5rem;
 }
 
 .video-anime{
     display: block;
     margin: 0 auto;
-    border: 5px solid #21391f;
+    border: 5px solid #000000;
     border-radius: 8px;
 }
 
 .gallery-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 1080px;
     margin: 0 auto;
 }
@@ -87,6 +101,11 @@ section {
     height: auto;
     display: block;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover{
+   transform: scale(1.05);
 }
 
 .gallery-item figcaption{
@@ -96,4 +115,81 @@ section {
     font-size: 1rem;
     text-align: center;
     background-color: #ffffff;
+}
+
+.contact-me-title{
+    padding-left: 1.5rem;
+}
+.contact-form-container{
+    max-width: 800px;
+    margin: auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.contact-form fieldset {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.contact-form legend{
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"], .contact-form textarea{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.contact-form textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form input[type="reset"] {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form input[type="submit"]:hover {
+    background-color: #000000;
+    color: #ffffff
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #555555;
+    outline-offset: 3px;
+}
+
+.letter-info{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.address-info{
+    font-style: normal;
+    line-height: 1.5;
 }
