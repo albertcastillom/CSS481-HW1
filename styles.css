@@ -5,6 +5,7 @@ body{
     padding: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 .nav-container{
@@ -54,4 +55,45 @@ body{
     text-align: center;
     color: #ffffff;
     font-size: 1rem;
+}
+
+section {
+    padding: 1rem;
+}
+
+.video-anime{
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #21391f;
+    border-radius: 8px;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.gallery-item{
+    margin: 0;
+    position: relative;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item figcaption{
+    width: 100%;
+    padding: 1rem;
+    color: #000000;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #ffffff;
 }
